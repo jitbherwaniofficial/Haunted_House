@@ -177,7 +177,7 @@ scene.add(floor)
  * Lights
  */
 // Ambient light
-const ambientLight = new THREE.AmbientLight('#b9d5ff', 0.12)
+const ambientLight = new THREE.AmbientLight('#b9d5ff', 0.3)
 gui.add(ambientLight, 'intensity').min(0).max(1).step(0.001)
 scene.add(ambientLight)
 
@@ -270,9 +270,13 @@ bush3.castShadow = true
 bush4.castShadow = true
 floor.receiveShadow = true
 
-// doorLight.shadow.mapSize.width = 256
-// doorLight.shadow.mapSize.height = 256
-// doorLight.shadow.camera.far = 7
+doorLight.shadow.mapSize.width = 256
+doorLight.shadow.mapSize.height = 256
+doorLight.shadow.camera.far = 7
+
+moonLight.shadow.mapSize.width = 256
+moonLight.shadow.mapSize.height = 256
+moonLight.shadow.camera.far = 15
 
 ghost1.shadow.mapSize.width = 256
 ghost1.shadow.mapSize.height = 256

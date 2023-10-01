@@ -177,7 +177,7 @@ scene.add(floor)
  * Lights
  */
 // Ambient light
-const ambientLight = new THREE.AmbientLight('#b9d5ff', 0.3)
+const ambientLight = new THREE.AmbientLight('#b9d5ff', 0.15)
 gui.add(ambientLight, 'intensity').min(0).max(1).step(0.001)
 scene.add(ambientLight)
 
@@ -191,7 +191,7 @@ gui.add(moonLight.position, 'z').min(- 5).max(5).step(0.001)
 scene.add(moonLight)
 
 // Door Light
-const doorLight = new THREE.PointLight('#ff7d46', 1, 7)
+const doorLight = new THREE.PointLight('#ff7d46', 2, 7)
 doorLight.position.set(0, 2.2, 2.7)
 house.add(doorLight)
 
@@ -274,9 +274,9 @@ doorLight.shadow.mapSize.width = 256
 doorLight.shadow.mapSize.height = 256
 doorLight.shadow.camera.far = 7
 
-moonLight.shadow.mapSize.width = 256
-moonLight.shadow.mapSize.height = 256
-moonLight.shadow.camera.far = 15
+// // moonLight.shadow.mapSize.width = 256
+// // moonLight.shadow.mapSize.height = 256
+// // moonLight.shadow.camera.far = 15
 
 ghost1.shadow.mapSize.width = 256
 ghost1.shadow.mapSize.height = 256

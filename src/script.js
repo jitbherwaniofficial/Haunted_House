@@ -301,14 +301,14 @@ const tick = () => {
     ghost1.position.y = Math.sin(ghostAngle * 3)
 
     const ghost2Angle = elapsedTime * 0.32
-    ghost2.position.x = Math.sin(ghostAngle) * 5
-    ghost2.position.z = Math.cos(ghostAngle) * 5
-    ghost2.position.y = Math.cos(ghostAngle * 4) + Math.sin(elapsedTime * 2.5)
+    ghost2.position.x = Math.sin(ghost2Angle) * 5
+    ghost2.position.z = Math.cos(ghost2Angle) * 5
+    ghost2.position.y = Math.cos(ghost2Angle * 4) + Math.sin(elapsedTime * 2.5)
 
     const ghost3Angle = elapsedTime * 0.18
-    ghost3.position.x = Math.sin(ghostAngle) * (7 + Math.sin(elapsedTime * 0.32))
-    ghost3.position.z = Math.sin(ghostAngle) * (7 + Math.sin(elapsedTime * 0.5))
-    ghost3.position.y = Math.cos(ghostAngle * 4) + Math.sin(elapsedTime * 2.5)
+    ghost3.position.x = Math.sin(ghost3Angle) * (7 + Math.sin(elapsedTime * 0.32))
+    ghost3.position.z = Math.sin(ghost3Angle) * (7 + Math.sin(elapsedTime * 0.5))
+    ghost3.position.y = Math.cos(ghost3Angle * 4) + Math.sin(elapsedTime * 2.5)
 
     // Update controls
     controls.update()

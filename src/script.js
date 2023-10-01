@@ -252,6 +252,7 @@ renderer.setClearColor('#262837')
 
 // SHADOWS
 
+
 renderer.shadowMap.enabled = true
 renderer.shadowMap.type = THREE.PCFSoftShadowMap
 

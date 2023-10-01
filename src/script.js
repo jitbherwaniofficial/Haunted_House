@@ -115,7 +115,7 @@ door.position.z = 2.01
 house.add(door)
 
 // Bushes 
-const bushGeometry = new THREE.SphereGeometry()
+const bushGeometry = new THREE.SphereGeometry(1, 16, 16)
 const bushMaterial = new THREE.MeshStandardMaterial({ color: '#89c854' })
 
 const bush1 = new THREE.Mesh(bushGeometry, bushMaterial)
@@ -191,7 +191,7 @@ gui.add(moonLight.position, 'z').min(- 5).max(5).step(0.001)
 scene.add(moonLight)
 
 // Door Light
-const doorLight = new THREE.PointLight('#ff7d46', 2, 7)
+const doorLight = new THREE.PointLight('#ff7d46', 1, 7)
 doorLight.position.set(0, 2.2, 2.7)
 house.add(doorLight)
 
